@@ -1,6 +1,3 @@
-//Array que almacena historial de las últimas cinco figuras calculadas.
-let figureLogArray = [];
-
 //Constructor de objeto que será la seleción ingresada de los tipos de figura y unidad de medida. 
 class Selection {
     constructor(figureName, unitName) {
@@ -13,7 +10,7 @@ class Selection {
 const figureSelectArray = ["Rectángulo", "Círculo", "Triángulo"];
 
 //Primer prompt para selección de figura a calcular.
-let figureSelect = prompt(`Seleccione una opción ingresando el número correspondiente.(Sin corchetes)\n[1] = ${figureSelectArray[0]}.\n[2] = ${figureSelectArray[1]}.\n[3] = ${figureSelectArray[2]}.`) - 1;
+let figureSelect = prompt(`Seleccione una opción ingresando el número correspondiente. (Sin corchetes)\n[1] = ${figureSelectArray[0]}.\n[2] = ${figureSelectArray[1]}.\n[3] = ${figureSelectArray[2]}.`) - 1;
 
 //Array que almacena opciones de unidades de medida.
 const unitSelectArray = ["cm", "m", "in"];
@@ -41,9 +38,6 @@ if (actSelection.figureName == figureSelectArray[0]){
     }
 
     let alto = prompt(`Ingrese el alto del rectángulo. (${actSelection.unitName})`);
-    if (alto <= 0) {
-        let alto = prompt(`No ingresó el valor. Ingrese el alto del rectángulo. (${actSelection.unitName})`);
-    }
 
     let ancho = prompt(`Ingrese el ancho del rectángulo. (${actSelection.unitName})`);
 
